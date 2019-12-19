@@ -28,7 +28,7 @@ This module provides Services available on a Magic Light, BLE RGB light bulb.
 
 """
 
-from adafruit_ble.service import Service
+from adafruit_ble.services import Service
 from adafruit_ble.uuid import VendorUUID
 from adafruit_ble.characteristics import Characteristic
 
