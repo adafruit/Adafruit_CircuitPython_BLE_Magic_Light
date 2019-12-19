@@ -14,7 +14,7 @@ Introduction
     :alt: Build Status
 
 BLE service for Magic Light BLE RGB bulbs. Available from Amazon
-[here](https://www.amazon.com/gp/product/B073S1KV4F).
+`here <https://www.amazon.com/gp/product/B073S1KV4F>`_.
 
 
 Dependencies
