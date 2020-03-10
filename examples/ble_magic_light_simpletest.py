@@ -5,6 +5,7 @@ import _bleio
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
 from adafruit_ble_magic_light import MagicLightService
 
+
 def find_connection():
     for connection in radio.connections:
         if MagicLightService not in connection:
@@ -12,8 +13,10 @@ def find_connection():
         return connection, connection[MagicLightService]
     return None, None
 
+
 # Start advertising before messing with the display so that we can connect immediately.
 radio = adafruit_ble.BLERadio()
+
 
 def wheel(pos):
     # Input a value 0 to 255 to get a color value.
@@ -28,6 +31,7 @@ def wheel(pos):
     pos -= 170
     return (pos * 3, 0, 255 - pos * 3)
 
+
 active_connection, pixels = find_connection()
 current_notification = None
 app_icon_file = None
@@ -39,7 +43,7 @@ while True:
                 active_connection = radio.connect(scan)
                 try:
                     pixels = active_connection[MagicLightService]
-                except _bleio.ConnectionError:
+                except _bleio.ConnectionError:  # pylint: disable=no-member
                     print("disconnected")
                     continue
                 break
