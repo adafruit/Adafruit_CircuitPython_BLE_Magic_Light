@@ -9,8 +9,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://travis-ci.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light.svg?branch=master
-    :target: https://travis-ci.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light/actions
     :alt: Build Status
 
 BLE service for Magic Light BLE RGB bulbs. Available from Amazon
