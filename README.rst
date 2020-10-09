@@ -66,7 +66,7 @@ Usage Example
     from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
     from adafruit_ble_magic_light import MagicLightService
     
-    # CircuitPython <6 uses it's own ConnectionError type. So, is it if available. Otherwise,
+    # CircuitPython <6 uses its own ConnectionError type. So, is it if available. Otherwise,
     # the built in ConnectionError is used.
     connection_error = ConnectionError
     if hasattr(_bleio, "ConnectionError"):
