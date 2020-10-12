@@ -11,6 +11,7 @@ connection_error = ConnectionError
 if hasattr(_bleio, "ConnectionError"):
     connection_error = _bleio.ConnectionError
 
+
 def find_connection():
     for connection in radio.connections:
         if MagicLightService not in connection:
