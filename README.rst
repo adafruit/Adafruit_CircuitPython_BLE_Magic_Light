@@ -65,6 +65,12 @@ Usage Example
 
     from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
     from adafruit_ble_magic_light import MagicLightService
+    
+    # CircuitPython <6 uses its own ConnectionError type. So, is it if available. Otherwise,
+    # the built in ConnectionError is used.
+    connection_error = ConnectionError
+    if hasattr(_bleio, "ConnectionError"):
+        connection_error = _bleio.ConnectionError
 
     def find_connection():
         for connection in radio.connections:
@@ -100,7 +106,7 @@ Usage Example
                     active_connection = radio.connect(scan)
                     try:
                         pixels = active_connection[MagicLightService]
-                    except _bleio.ConnectionError:
+                    except connection_error:
                         print("disconnected")
                         continue
                     break
