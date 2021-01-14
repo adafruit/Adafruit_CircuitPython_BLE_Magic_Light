@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
+
 """This demo connects to a magic light and has it do a color wheel."""
 import adafruit_ble
 import _bleio
