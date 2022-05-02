@@ -33,7 +33,7 @@ class MagicLightService(Service):
         uuid=VendorUUID("0000ffe9-0000-1000-8000-00805f9b34fb"), max_length=7
     )
 
-    def __init__(self, service: None = None) -> None:
+    def __init__(self, service: Optional["MagicLightService"] = None) -> None:
         super().__init__(service=service)
         self._color = 0xFFFFFF
         self._buf = bytearray(7)
@@ -41,12 +41,12 @@ class MagicLightService(Service):
         self._buf[6] = 0xAA
         self._brightness = 1.0
 
-    def __getitem__(self, index: int) -> IndexError | int:
+    def __getitem__(self, index: int) -> int:
         if index > 0:
             raise IndexError()
         return self._color
 
-    def __setitem__(self, index: int, value: int) -> Optional[IndexError]:
+    def __setitem__(self, index: int, value: int) -> None:
         if index > 0:
             raise IndexError()
         if isinstance(value, int):
