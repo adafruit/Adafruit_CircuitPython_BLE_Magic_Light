@@ -13,6 +13,10 @@ Introduction
     :target: https://github.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light/actions
     :alt: Build Status
 
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: Code Style: Black
+
 BLE service for Magic Light BLE RGB bulbs. Available from Amazon
 `here <https://www.amazon.com/gp/product/B073S1KV4F>`_.
 
