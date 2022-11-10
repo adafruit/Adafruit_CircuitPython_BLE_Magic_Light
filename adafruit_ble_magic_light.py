@@ -63,7 +63,7 @@ class MagicLightService(Service):
         self._control = self._buf
         self._color = value
 
-    def __len__(self):
+    def __len__(self) -> int:
         return 1
 
     # Brightness doesn't preserve the color so comment it out for now. There are many other
