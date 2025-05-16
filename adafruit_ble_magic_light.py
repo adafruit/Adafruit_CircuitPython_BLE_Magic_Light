@@ -15,9 +15,9 @@ try:
 except ImportError:
     pass
 
+from adafruit_ble.characteristics import Characteristic
 from adafruit_ble.services import Service
 from adafruit_ble.uuid import VendorUUID
-from adafruit_ble.characteristics import Characteristic
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light.git"
@@ -29,9 +29,7 @@ class MagicLightService(Service):
     # These UUIDs actually use the standard base UUID even though they aren't standard.
     uuid = VendorUUID("0000ffe5-0000-1000-8000-00805f9b34fb")
 
-    _control = Characteristic(
-        uuid=VendorUUID("0000ffe9-0000-1000-8000-00805f9b34fb"), max_length=7
-    )
+    _control = Characteristic(uuid=VendorUUID("0000ffe9-0000-1000-8000-00805f9b34fb"), max_length=7)
 
     def __init__(self, service: Optional["MagicLightService"] = None) -> None:
         super().__init__(service=service)

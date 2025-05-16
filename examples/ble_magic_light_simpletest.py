@@ -2,11 +2,12 @@
 # SPDX-License-Identifier: MIT
 
 """This demo connects to a magic light and has it do a colorwheel."""
-from rainbowio import colorwheel
-import adafruit_ble
-import _bleio
 
+import _bleio
+import adafruit_ble
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
+from rainbowio import colorwheel
+
 from adafruit_ble_magic_light import MagicLightService
 
 # CircuitPython <6 uses its own ConnectionError type. So, is it if available. Otherwise,
